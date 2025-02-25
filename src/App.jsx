@@ -4,7 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Trial from './pages/Trial'
+import Navbar from './components/navbar'
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <Navbar/>
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
