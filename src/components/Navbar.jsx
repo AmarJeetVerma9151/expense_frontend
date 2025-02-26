@@ -3,9 +3,6 @@
 import { Button, Menu } from "antd";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import { Menu, X } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-// import{useDispatch} from 'react-redux'
 
 export default function Navbar() {
   // let dispatch=useDispatch()
