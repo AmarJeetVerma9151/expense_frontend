@@ -9,14 +9,7 @@ import { useState } from 'react'
 
 function App() {
    const [login, setlogin] = useState(false);
-  
-
-
-
-
-  
-
-console.log(value)
+  // console.log(value)
   return (
     <>
     <BrowserRouter>
