@@ -5,20 +5,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 // import { Menu, X } from "lucide-react";
 // import { Button } from "@/components/ui/button";
+// import{useDispatch} from 'react-redux'
 
 export default function Navbar() {
+  // let dispatch=useDispatch()
+  
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-blue-600 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-xl font-bold">Brand</h1>
+        <h1 className="text-white text-xl font-bold">Expanse</h1>
         
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="text-white">Home</Link>
           <Link to="login" className="text-white">Login</Link>
           <Link to="register" variant="outline" className="text-white border-white">Sign Up</Link>
-          <Link to="register" variant="outline" className="text-white border-white">logout</Link>
+          {/* <li onClick={()=> dispatch(logout())} to="register" variant="outline" className="text-white border-white">logout</li> */}
         </div>
         
         <button
