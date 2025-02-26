@@ -1,8 +1,10 @@
-import React from 'react'
+// import React from 'react'
 
+import { Button, Menu } from "antd";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+// import { Menu, X } from "lucide-react";
+// import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +15,10 @@ export default function Navbar() {
         <h1 className="text-white text-xl font-bold">Brand</h1>
         
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="text-white">Home</a>
-          <a href="#" className="text-white">Login</a>
-          <Button variant="outline" className="text-white border-white">Sign Up</Button>
+          <Link to="/" className="text-white">Home</Link>
+          <Link to="login" className="text-white">Login</Link>
+          <Link to="register" variant="outline" className="text-white border-white">Sign Up</Link>
+          <Link to="register" variant="outline" className="text-white border-white">logout</Link>
         </div>
         
         <button
@@ -26,13 +29,13 @@ export default function Navbar() {
         </button>
       </div>
 
-      {isOpen && (
+      {/* {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-blue-700 p-4 space-y-4">
           <a href="#" className="text-white">Home</a>
           <a href="#" className="text-white">Login</a>
           <Button variant="outline" className="text-white border-white">Sign Up</Button>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }

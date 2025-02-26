@@ -2,8 +2,8 @@ import axios from 'axios'
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
-
+const Login = (props) => {
+    
 
   let emailRef = useRef()
   let passwordRef = useRef()
@@ -24,6 +24,7 @@ const Login = () => {
     // console.log(res.data)
     if(res.data.success){
       localStorage.setItem( 'expenseLogin',JSON.stringify(res.data.user))
+      props.setlogin(true)
       navigate('/')
     }
     else{
