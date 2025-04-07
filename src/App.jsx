@@ -4,8 +4,8 @@ import './App.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Navbar from './components/navbar'
 import { useState } from 'react'
+import Navbar from './components/Navbar'
 
 function App() {
    const [login, setlogin] = useState(false);
